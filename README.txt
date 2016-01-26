@@ -2,7 +2,7 @@ Sheffield Wave Environment Model (SWEM)
 
 SWEM is a Matlab/Simulink block set for simulating sea-surfaces. It includes the effects of ocean swell, gusting local wind, surface current and finite water depth on the surface waves it simulates. SWEM can be used an environmental disturbance block in boat dynamics simulators such as the open-source Marine Systems Simulator (MSS). Information on the physics incorporated into SWEM and a tutorial on its functionality can be found in “SWEM_Tutorial.pdf”.
 
-SWEM has been developed by P. H. Heins and B. Ll. Jones in the Department of Automatic Control and Systems Engineering, The University of Sheffield, U.K. since 2015, initially as part of a project funded by Innovate UK.   
+SWEM has been developed by P. H. Heins and B. Ll. Jones of the Department of Automatic Control and Systems Engineering, The University of Sheffield, U.K. since 2015, initially as part of a project funded by Innovate UK.   
 
 Copyright © 2015-2016 Peter H. Heins and Bryn Ll. Jones.
  
