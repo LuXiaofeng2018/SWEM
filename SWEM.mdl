@@ -7,7 +7,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.194"
+    ComputedModelVersion    "1.200"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -29,7 +29,7 @@ Model {
       $ObjectID		      2
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [209.0, 121.0, 1408.0, 859.0]
+      Location		      [65.0, 24.0, 1855.0, 1056.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		3
@@ -53,9 +53,9 @@ Model {
 	IsActive		[1]
 	ViewObjType		"SimulinkTopLevel"
 	LoadSaveID		"0"
-	Extents			[1354.0, 666.0]
+	Extents			[1821.0, 911.0]
 	ZoomFactor		[1.75]
-	Offset			[-154.07848147062478, 99.195968139848162]
+	Offset			[-228.08754396934594, 41.298092596505896]
       }
     }
   }
@@ -65,9 +65,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "brynljones"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Tue Jan 26 10:18:45 2016"
-  RTWModifiedTimeStamp	  375704118
-  ModelVersionFormat	  "1.%<AutoIncrement:194>"
+  LastModifiedDate	  "Tue Jan 26 13:26:07 2016"
+  RTWModifiedTimeStamp	  375715223
+  ModelVersionFormat	  "1.%<AutoIncrement:200>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -162,7 +162,7 @@ Model {
 	  $ObjectID		  8
 	  Version		  "1.15.1"
 	  StartTime		  "0.0"
-	  StopTime		  "100"
+	  StopTime		  "1"
 	  AbsTol		  "auto"
 	  FixedStep		  "0.5"
 	  InitialStep		  "auto"
@@ -702,8 +702,8 @@ Model {
 	PropName		"Components"
       }
       Name		      "Configuration"
-      CurrentDlgPage	      "Hardware Implementation"
-      ConfigPrmDlgPosition     [ 477, 88, 1657, 1048 ] 
+      CurrentDlgPage	      "Solver"
+      ConfigPrmDlgPosition     [ 61, 61, 1181, 925 ] 
     }
     PropName		    "ConfigurationSets"
   }
@@ -943,7 +943,7 @@ Model {
   }
   System {
     Name		    "SWEM"
-    Location		    [209, 121, 1617, 980]
+    Location		    [65, 24, 1920, 1080]
     Open		    on
     ModelBrowserVisibility  off
     ModelBrowserWidth	    200
@@ -957,7 +957,7 @@ Model {
     ShowPageBoundaries	    off
     ZoomFactor		    "175"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "126"
+    SIDHighWatermark	    "135"
     Block {
       BlockType		      SubSystem
       Name		      "Boat Sim Format"
@@ -1386,7 +1386,7 @@ Model {
       Variant		      off
       System {
 	Name			"Plotting"
-	Location		[480, 142, 1888, 1001]
+	Location		[65, 24, 1920, 1080]
 	Open			off
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
@@ -2006,7 +2006,7 @@ Model {
 	$ClassName		"Simulink.Mask"
 	Initialization		"if (Swell_Hs_u == 2)\n    [Om,PSI_swell,kx,ky,phase,U_swell] = swellComponent_Hs(depth,M,M,Lx,Lx,Hs_"
 	"swell,swell_angle);\nelse\n    [Om,PSI_swell,kx,ky,phase] = swellComponent_U(depth,M,M,Lx,Lx,U_swell,fetch_swell,swel"
-	"l_angle);\nend\n[Ua,phig,fg] = Norso_Gust(U_mean,df,Nf);\n"
+	"l_angle);\nend\n[Ua,phig,fg] = Norso_Gust(U_mean,df,Nf);\nsave('dt');\n"
 	Display			"image('sea1.jpg')"
 	Array {
 	  Type			  "Simulink.MaskParameter"
@@ -2059,7 +2059,7 @@ Model {
 	    }
 	    Name		    "Viz"
 	    Prompt		    "Visualisation:"
-	    Value		    "Surface Plot"
+	    Value		    "Contour Plot"
 	  }
 	  Object {
 	    $ObjectID		    27
@@ -2348,7 +2348,7 @@ Model {
       }
       System {
 	Name			"Sheffield Wave Environment Model (SWEM)"
-	Location		[328, 157, 1736, 1016]
+	Location		[65, 24, 1920, 1080]
 	Open			off
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
@@ -2360,7 +2360,7 @@ Model {
 	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
 	TiledPageScale		1
 	ShowPageBoundaries	off
-	ZoomFactor		"80"
+	ZoomFactor		"60"
 	Block {
 	  BlockType		  Sum
 	  Name			  "Add"
@@ -3202,7 +3202,7 @@ Model {
 	  BlockType		  Outport
 	  Name			  "Wave_Spectrum"
 	  SID			  "9"
-	  Position		  [1140, 198, 1170, 212]
+	  Position		  [1140, 238, 1170, 252]
 	  ZOrder		  8
 	  BackgroundColor	  "red"
 	  IconDisplay		  "Port number"
@@ -3211,7 +3211,7 @@ Model {
 	  BlockType		  Outport
 	  Name			  "Speed_Angle"
 	  SID			  "48"
-	  Position		  [1340, 1363, 1370, 1377]
+	  Position		  [1340, 1448, 1370, 1462]
 	  ZOrder		  34
 	  BackgroundColor	  "red"
 	  Port			  "2"
@@ -3277,7 +3277,6 @@ Model {
 	  ZOrder		  25
 	  SrcBlock		  "Bus\nCreator"
 	  SrcPort		  1
-	  Points		  [1, 0; 0, -40]
 	  DstBlock		  "Wave_Spectrum"
 	  DstPort		  1
 	}
@@ -3429,7 +3428,6 @@ Model {
 	  ZOrder		  59
 	  SrcBlock		  "Bus\nCreator1"
 	  SrcPort		  1
-	  Points		  [41, 0; 0, -85]
 	  DstBlock		  "Speed_Angle"
 	  DstPort		  1
 	}
@@ -3673,6 +3671,7 @@ Model {
       HorizontalAlignment     "left"
       VerticalAlignment	      "top"
       Interpreter	      "rich"
+      ZOrder		      -1
     }
   }
 }
@@ -4134,7 +4133,10 @@ Stateflow {
     firstTransition	    40
     firstJunction	    39
     viewObj		    23
+    visible		    1
     machine		    1
+    subviewS {
+    }
     ssIdHighWaterMark	    20
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
@@ -4162,79 +4164,80 @@ Stateflow {
       script		      "function fcn(omega,psi,kx,ky,phase,t,U_local,local_angle,U_current,current_angle,U_swell,swell_an"
       "gle,lam,Viz)\n%#codegen\ncoder.extrinsic('sprintf')\ncoder.extrinsic('compass')\ncoder.extrinsic('legend')\ncode"
       "r.extrinsic('contourf')\ncoder.extrinsic('colorbar')\ncoder.extrinsic('quiver')\ncoder.extrinsic('annotation')\n"
-      "\nif (t==0)\n    close all\nend\n\nif (Viz==3)\n    \nelse\n    \n    % Parameters\n    M = length(kx);\n    N ="
-      " length(ky);\n    \n    Lx = (2*pi)/kx(2);\n    Ly = (2*pi)/ky(2);\n    dkx = kx(2);\n    dky = ky(2);\n    \n  "
-      "  x = [0:M-1]*(Lx/M);\n    y = [0:N-1]*(Ly/N);\n    \n    [xx,yy] = meshgrid(x,y);\n    [kxx,kyy] = meshgrid(kx,"
-      "ky);\n    kk = sqrt((kxx.^2)+(kyy.^2));\n    \n    % initialise matrices\n    PSI = zeros(M,N);\n    Om = zeros("
-      "M,N);\n    Phase = zeros(M,N);\n    \n    ind = 0;\n    for rw = 1:M\n        for col = 1:N\n            ind = i"
-      "nd+1;\n            \n            PSI(rw,col) = psi(ind);\n            Om(rw,col) = omega(ind);\n            Phas"
-      "e(rw,col) = phase(ind);\n            \n        end\n    end\n    \n    % calculate aplitude spectrum\n    a = sq"
-      "rt(2*PSI*dkx*dky);\n    \n    % calculate sig. wave height and sea state\n    m0 = sum(sum( (a.^2)/2));\n    Hs "
-      "= 4*sqrt(m0);\n    SS = getSS(Hs);\n    \n    % add time-despendency to ampltide spectrum\n    A = a.*exp(1i*(-O"
-      "m*t + Phase));\n    \n    KXX = (kxx.*A)./kk;\n    KYY = (kyy.*A)./kk;\n    \n    % calculate x,y,z coordinates "
-      "of surface\n    h = (M*N)*real(ifft2(A));\n    \n    if (lam>0)\n        Dx = (M*N)*imag(ifft2(KXX));\n        D"
-      "y = (M*N)*imag(ifft2(KYY));\n        \n        xxn = xx-lam*Dx;\n        yyn = yy-lam*Dy;\n    else\n        xxn"
-      " = xx;\n        yyn = yy;\n    end\n    \n    %% Plotting\n    \n    % Contour plot\n    \n    if (Viz==2)\n    "
-      "    \n       Nx = Lx;\n\n        \n        contourf(xxn,yyn,h,20,'linestyle','none');\n        caxis([-round(Hs)"
-      " round(Hs)]);\n        colorbar\n        colormap('winter')\n        xlim([0.05*Nx Lx-0.05*Nx]);\n        ylim(["
-      "0.05*Nx Lx-0.05*Nx]);\n        hold on;\n        \n        Arrow = Nx*(18/(100*pi));\n        \n        % Swell\n"
-      "        Xswell = (59.1/100)*Nx;\n        Yswell = (86/100)*Nx;\n\n        plot([Xswell Xswell],[Yswell Yswell],'"
-      "ko','markersize',70,'markerfacecolor','white');\n        drawArrow([Xswell Xswell+(Arrow*cos(-((2*pi)/360)*swell"
-      "_angle+pi/2))],[Yswell Yswell+(Arrow*sin(-((2*pi)/360)*swell_angle+pi/2))],'linewidth',1,'color','k','maxheadsiz"
-      "e',0.8)\n        \n        Xswell2 = (55/100)*Nx;\n        Yswell2 = (74/100)*Nx;        \n        \n        Swe"
-      "ll_num = sprintf('%3.1f$m/s$',U_swell);        \n        text(Xswell2,Yswell2,Swell_num,'interpreter','latex','F"
-      "ontWeight','bold','color','white','fontsize',14);\n        \n        % Local\n        Xlocal = (72.8/100)*Nx;\n "
-      "       Ylocal = (86/100)*Nx;\n        \n        plot([Xlocal Xlocal],[Ylocal Ylocal],'ko','markersize',70,'marke"
-      "rfacecolor','white');\n        drawArrow([Xlocal Xlocal+(Arrow*cos(-((2*pi)/360)*local_angle+pi/2))],[Ylocal Ylo"
-      "cal+(Arrow*sin(-((2*pi)/360)*local_angle+pi/2))],'linewidth',1,'color','k','maxheadsize',0.8)\n        \n       "
-      " Xlocal2 = (68.5/100)*Nx;\n        Ylocal2 = (74/100)*Nx;\n        \n        Local_num = sprintf('%3.1f$m/s$',U_"
-      "local);        \n        text(Xlocal2,Ylocal2,Local_num,'interpreter','latex','FontWeight','bold','color','white"
-      "','fontsize',14);\n        \n        % Current\n        Xc = (86.6/100)*Nx;\n        Yc = (86/100)*Nx;\n        "
-      "\n        plot([Xc Xc],[Yc Yc],'ko','markersize',70,'markerfacecolor','white');\n        drawArrow([Xc Xc+(Arrow"
-      "*cos(-((2*pi)/360)*current_angle+pi/2))],[Yc Yc+(Arrow*sin(-((2*pi)/360)*current_angle+pi/2))],'linewidth',1,'co"
-      "lor','k','maxheadsize',0.8)\n        \n        Xc2 = (82.5/100)*Nx;\n        Yc2 = (74/100)*Nx;       \n        "
-      "\n        Current_num = sprintf('%3.1f$m/s$',U_current);        \n        text(Xc2,Yc2,Current_num,'interpreter'"
-      ",'latex','FontWeight','bold','color','white','fontsize',14);\n        \n        \n        \n        \n        se"
-      "t(gca,'fontsize',14);\n        ylabel('$x$($m$)','interpreter','latex','fontsize',24);\n        xlabel('$y$($m$)"
-      "','interpreter','latex','fontsize',24);\n        \n        tit = sprintf('$t$=%3.1f$s$, ${h_s}$=%3.2f$m$, Sea St"
-      "ate=%i',t,Hs,SS);\n        title(tit,'fontsize',20,'interpreter','latex');\n        hold off;\n        \n       "
-      " \n        if (t==0)\n            annotation('textbox',[0.52 0.48 0.3 0.3],'String',  'Swell','FontWeight','bold"
-      "','FitBoxToText','on','edgecolor','none','color','w','backgroundcolor','none');\n            annotation('textbox"
-      "',[0.61 0.48 0.3 0.3],'String','Local wind','FontWeight','bold','FitBoxToText','on','edgecolor','none','color','"
-      "w','backgroundcolor','none');\n            annotation('textbox',[0.73 0.48 0.3 0.3],'String','Current','FontWeig"
-      "ht','bold','FitBoxToText','on','edgecolor','none','color','w','backgroundcolor','none');\n            \n        "
-      "    % Swell\n            annotation('textbox',[0.54 0.612 0.3 0.3],'String','0','FitBoxToText','on','edgecolor',"
-      "'none','fontsize',8);\n            annotation('textbox',[0.532 0.51 0.3 0.3],'String','180','FitBoxToText','on',"
-      "'edgecolor','none','fontsize',8);\n            annotation('textbox',[0.575 0.56 0.3 0.3],'String','90','FitBoxTo"
-      "Text','on','edgecolor','none','fontsize',8);\n            annotation('textbox',[0.497 0.56 0.3 0.3],'String','27"
-      "0','FitBoxToText','on','edgecolor','none','fontsize',8);\n            % Local\n            annotation('textbox',"
-      "[0.65 0.612 0.3 0.3],'String','0','FitBoxToText','on','edgecolor','none','fontsize',8);\n            annotation("
-      "'textbox',[0.642 0.51 0.3 0.3],'String','180','FitBoxToText','on','edgecolor','none','fontsize',8);\n           "
-      " annotation('textbox',[0.685 0.56 0.3 0.3],'String','90','FitBoxToText','on','edgecolor','none','fontsize',8);\n"
-      "            annotation('textbox',[0.607 0.56 0.3 0.3],'String','270','FitBoxToText','on','edgecolor','none','fon"
-      "tsize',8);\n            % Current\n            annotation('textbox',[0.76 0.612 0.3 0.3],'String','0','FitBoxToT"
-      "ext','on','edgecolor','none','fontsize',8);\n            annotation('textbox',[0.752 0.51 0.3 0.3],'String','180"
-      "','FitBoxToText','on','edgecolor','none','fontsize',8);\n            annotation('textbox',[0.795 0.56 0.3 0.3],'"
-      "String','90','FitBoxToText','on','edgecolor','none','fontsize',8);\n            annotation('textbox',[0.717 0.56"
-      " 0.3 0.3],'String','270','FitBoxToText','on','edgecolor','none','fontsize',8);\n        end\n        \n        s"
-      "et(gcf,'position',[100 100 900 700])\n        \n        drawnow\n        \n    else\n        \n        \n       "
-      " \n        \n        % Surface plot\n        subplot(1,2,1)       \n        surf(xxn,yyn,h,'linestyle','none');\n"
-      "        \n        colormap('winter')\n        \n        xlim([0 Lx]);\n        ylim([0 Ly]);\n        zlim([-5*r"
-      "ound(Hs) 5*round(Hs)])\n        \n        caxis([-round(Hs) round(Hs)]);\n        \n        view([-14 52])\n    "
-      "    \n        tit = sprintf('$t$=%3.1f$s$, ${h_s}$=%3.2f$m$, Sea State=%i',t,Hs,SS);\n        title(tit,'fontsiz"
-      "e',20,'interpreter','latex');\n        ylabel('$x$($m$)','interpreter','latex','fontsize',24);\n        xlabel('"
-      "$y$($m$)','interpreter','latex','fontsize',24);\n        zlabel('$\\eta$($m$)','interpreter','latex','fontsize',"
-      "24);\n        set(gca,'fontsize',14);\n        \n        \n        % compass\n        subplot(1,2,2)\n        if"
-      " (U_local>U_swell)\n            compass(U_local*cos(((2*pi)/360)*local_angle),U_local*sin(((2*pi)/360)*local_ang"
-      "le),'r');\n            hold on;\n            compass(U_swell*cos(((2*pi)/360)*swell_angle),U_swell*sin(((2*pi)/3"
-      "60)*swell_angle),'b');\n            compass(10*U_current*cos(((2*pi)/360)*current_angle),10*U_current*sin(((2*pi"
-      ")/360)*current_angle),'k');\n            hold off;\n            legend('Local wind','Swell wind','10xCurrent','L"
-      "ocation','south');\n            view([90 -90])\n        else\n            compass(U_swell*cos(((2*pi)/360)*swell"
-      "_angle),U_swell*sin(((2*pi)/360)*swell_angle),'b');\n            hold on;\n            compass(U_local*cos(((2*p"
-      "i)/360)*local_angle),U_local*sin(((2*pi)/360)*local_angle),'r');\n            compass(10*U_current*cos(((2*pi)/3"
-      "60)*current_angle),10*U_current*sin(((2*pi)/360)*current_angle),'k');\n            hold off;\n            legend"
-      "('Swell wind','Local wind','10xCurrent','Location','south');\n            view([90 -90])\n        end\n        \n"
-      "        drawnow\n        \n    end\n    \nend\n\n\n\n\n\n\n\n"
+      "coder.extrinsic('set')\n\n\nif (t==0)\n    close all\nend\n\nif (Viz==3)\n    \nelse\n    \n    % Parameters\n  "
+      "  M = length(kx);\n    N = length(ky);\n    \n    Lx = (2*pi)/kx(2);\n    Ly = (2*pi)/ky(2);\n    dkx = kx(2);\n"
+      "    dky = ky(2);\n    \n    x = [0:M-1]*(Lx/M);\n    y = [0:N-1]*(Ly/N);\n    \n    [xx,yy] = meshgrid(x,y);\n  "
+      "  [kxx,kyy] = meshgrid(kx,ky);\n    kk = sqrt((kxx.^2)+(kyy.^2));\n    \n    % initialise matrices\n    PSI = ze"
+      "ros(M,N);\n    Om = zeros(M,N);\n    Phase = zeros(M,N);\n    \n    ind = 0;\n    for rw = 1:M\n        for col "
+      "= 1:N\n            ind = ind+1;\n            \n            PSI(rw,col) = psi(ind);\n            Om(rw,col) = ome"
+      "ga(ind);\n            Phase(rw,col) = phase(ind);\n            \n        end\n    end\n    \n    % calculate apl"
+      "itude spectrum\n    a = sqrt(2*PSI*dkx*dky);\n    \n    % calculate sig. wave height and sea state\n    m0 = sum"
+      "(sum( (a.^2)/2));\n    Hs = 4*sqrt(m0);\n    SS = getSS(Hs);\n    \n    % add time-despendency to ampltide spect"
+      "rum\n    A = a.*exp(1i*(-Om*t + Phase));\n    \n    KXX = (kxx.*A)./kk;\n    KYY = (kyy.*A)./kk;\n    \n    % ca"
+      "lculate x,y,z coordinates of surface\n    h = (M*N)*real(ifft2(A));\n    \n    if (lam>0)\n        Dx = (M*N)*im"
+      "ag(ifft2(KXX));\n        Dy = (M*N)*imag(ifft2(KYY));\n        \n        xxn = xx-lam*Dx;\n        yyn = yy-lam*"
+      "Dy;\n    else\n        xxn = xx;\n        yyn = yy;\n    end\n    \n    %% Plotting\n    \n    % Contour plot\n "
+      "   \n    if (Viz==2)\n        \n       Nx = Lx;\n\n        \n        contourf(xxn,yyn,h,20,'linestyle','none');\n"
+      "        caxis([-round(Hs) round(Hs)]);\n        colorbar\n        colormap('winter')\n        xlim([0.05*Nx Lx-0"
+      ".05*Nx]);\n        ylim([0.05*Nx Lx-0.05*Nx]);\n        hold on;\n        \n        Arrow = Nx*(18/(100*pi));\n "
+      "       \n        % Swell\n        Xswell = (59.1/100)*Nx;\n        Yswell = (86/100)*Nx;\n\n        plot([Xswell"
+      " Xswell],[Yswell Yswell],'ko','markersize',70,'markerfacecolor','white');\n        drawArrow([Xswell Xswell+(Arr"
+      "ow*cos(-((2*pi)/360)*swell_angle+pi/2))],[Yswell Yswell+(Arrow*sin(-((2*pi)/360)*swell_angle+pi/2))],'linewidth'"
+      ",1,'color','k','maxheadsize',0.8)\n        \n        Xswell2 = (55/100)*Nx;\n        Yswell2 = (74/100)*Nx;     "
+      "   \n        \n        Swell_num = sprintf('%3.1f$m/s$',U_swell);        \n        text(Xswell2,Yswell2,Swell_nu"
+      "m,'interpreter','latex','FontWeight','bold','color','white','fontsize',14);\n        \n        % Local\n        "
+      "Xlocal = (72.8/100)*Nx;\n        Ylocal = (86/100)*Nx;\n        \n        plot([Xlocal Xlocal],[Ylocal Ylocal],'"
+      "ko','markersize',70,'markerfacecolor','white');\n        drawArrow([Xlocal Xlocal+(Arrow*cos(-((2*pi)/360)*local"
+      "_angle+pi/2))],[Ylocal Ylocal+(Arrow*sin(-((2*pi)/360)*local_angle+pi/2))],'linewidth',1,'color','k','maxheadsiz"
+      "e',0.8)\n        \n        Xlocal2 = (68.5/100)*Nx;\n        Ylocal2 = (74/100)*Nx;\n        \n        Local_num"
+      " = sprintf('%3.1f$m/s$',U_local);        \n        text(Xlocal2,Ylocal2,Local_num,'interpreter','latex','FontWei"
+      "ght','bold','color','white','fontsize',14);\n        \n        % Current\n        Xc = (86.6/100)*Nx;\n        Y"
+      "c = (86/100)*Nx;\n        \n        plot([Xc Xc],[Yc Yc],'ko','markersize',70,'markerfacecolor','white');\n     "
+      "   drawArrow([Xc Xc+(Arrow*cos(-((2*pi)/360)*current_angle+pi/2))],[Yc Yc+(Arrow*sin(-((2*pi)/360)*current_angle"
+      "+pi/2))],'linewidth',1,'color','k','maxheadsize',0.8)\n        \n        Xc2 = (82.5/100)*Nx;\n        Yc2 = (74"
+      "/100)*Nx;       \n        \n        Current_num = sprintf('%3.1f$m/s$',U_current);        \n        text(Xc2,Yc2"
+      ",Current_num,'interpreter','latex','FontWeight','bold','color','white','fontsize',14);\n        \n        \n    "
+      "    \n        \n        set(gca,'fontsize',14);\n        ylabel('$x$($m$)','interpreter','latex','fontsize',24);"
+      "\n        xlabel('$y$($m$)','interpreter','latex','fontsize',24);\n        \n        tit = sprintf('$t$=%3.1f$s$"
+      ", ${h_s}$=%3.2f$m$, Sea State=%i',t,Hs,SS);\n        title(tit,'fontsize',20,'interpreter','latex');\n        ho"
+      "ld off;\n        \n        \n        if (t==0)\n            annotation('textbox',[0.52 0.48 0.3 0.3],'String',  "
+      "'Swell','FontWeight','bold','FitBoxToText','on','edgecolor','none','color','w','backgroundcolor','none');\n     "
+      "       annotation('textbox',[0.61 0.48 0.3 0.3],'String','Local wind','FontWeight','bold','FitBoxToText','on','e"
+      "dgecolor','none','color','w','backgroundcolor','none');\n            annotation('textbox',[0.73 0.48 0.3 0.3],'S"
+      "tring','Current','FontWeight','bold','FitBoxToText','on','edgecolor','none','color','w','backgroundcolor','none'"
+      ");\n            \n            % Swell\n            annotation('textbox',[0.54 0.612 0.3 0.3],'String','0','FitBo"
+      "xToText','on','edgecolor','none','fontsize',8);\n            annotation('textbox',[0.532 0.51 0.3 0.3],'String',"
+      "'180','FitBoxToText','on','edgecolor','none','fontsize',8);\n            annotation('textbox',[0.575 0.56 0.3 0."
+      "3],'String','90','FitBoxToText','on','edgecolor','none','fontsize',8);\n            annotation('textbox',[0.497 "
+      "0.56 0.3 0.3],'String','270','FitBoxToText','on','edgecolor','none','fontsize',8);\n            % Local\n       "
+      "     annotation('textbox',[0.65 0.612 0.3 0.3],'String','0','FitBoxToText','on','edgecolor','none','fontsize',8)"
+      ";\n            annotation('textbox',[0.642 0.51 0.3 0.3],'String','180','FitBoxToText','on','edgecolor','none','"
+      "fontsize',8);\n            annotation('textbox',[0.685 0.56 0.3 0.3],'String','90','FitBoxToText','on','edgecolo"
+      "r','none','fontsize',8);\n            annotation('textbox',[0.607 0.56 0.3 0.3],'String','270','FitBoxToText','o"
+      "n','edgecolor','none','fontsize',8);\n            % Current\n            annotation('textbox',[0.76 0.612 0.3 0."
+      "3],'String','0','FitBoxToText','on','edgecolor','none','fontsize',8);\n            annotation('textbox',[0.752 0"
+      ".51 0.3 0.3],'String','180','FitBoxToText','on','edgecolor','none','fontsize',8);\n            annotation('textb"
+      "ox',[0.795 0.56 0.3 0.3],'String','90','FitBoxToText','on','edgecolor','none','fontsize',8);\n            annota"
+      "tion('textbox',[0.717 0.56 0.3 0.3],'String','270','FitBoxToText','on','edgecolor','none','fontsize',8);\n      "
+      "      \n        \n        end\n        \n        %set(gcf,'position',[100 100 900 700])\n        \n        set(g"
+      "cf,'position',[1.0312    1.0312    9.3750    7.2917],'units','inches')\n\n        \n        drawnow\n        \n "
+      "   else\n        \n        \n        \n        \n        % Surface plot\n        subplot(1,2,1)       \n        "
+      "surf(xxn,yyn,h,'linestyle','none');\n        \n        colormap('winter')\n        \n        xlim([0 Lx]);\n    "
+      "    ylim([0 Ly]);\n        zlim([-5*round(Hs) 5*round(Hs)])\n        \n        caxis([-round(Hs) round(Hs)]);\n "
+      "       \n        view([-14 52])\n        \n        tit = sprintf('$t$=%3.1f$s$, ${h_s}$=%3.2f$m$, Sea State=%i',"
+      "t,Hs,SS);\n        title(tit,'fontsize',20,'interpreter','latex');\n        ylabel('$x$($m$)','interpreter','lat"
+      "ex','fontsize',24);\n        xlabel('$y$($m$)','interpreter','latex','fontsize',24);\n        zlabel('$\\eta$($m"
+      "$)','interpreter','latex','fontsize',24);\n        set(gca,'fontsize',14);\n        \n        \n        % compas"
+      "s\n        subplot(1,2,2)\n        if (U_local>U_swell)\n            compass(U_local*cos(((2*pi)/360)*local_angl"
+      "e),U_local*sin(((2*pi)/360)*local_angle),'r');\n            hold on;\n            compass(U_swell*cos(((2*pi)/36"
+      "0)*swell_angle),U_swell*sin(((2*pi)/360)*swell_angle),'b');\n            compass(10*U_current*cos(((2*pi)/360)*c"
+      "urrent_angle),10*U_current*sin(((2*pi)/360)*current_angle),'k');\n            hold off;\n            legend('Loc"
+      "al wind','Swell wind','10xCurrent','Location','south');\n            view([90 -90])\n        else\n            c"
+      "ompass(U_swell*cos(((2*pi)/360)*swell_angle),U_swell*sin(((2*pi)/360)*swell_angle),'b');\n            hold on;\n"
+      "            compass(U_local*cos(((2*pi)/360)*local_angle),U_local*sin(((2*pi)/360)*local_angle),'r');\n         "
+      "   compass(10*U_current*cos(((2*pi)/360)*current_angle),10*U_current*sin(((2*pi)/360)*current_angle),'k');\n    "
+      "        hold off;\n            legend('Swell wind','Local wind','10xCurrent','Location','south');\n            v"
+      "iew([90 -90])\n        end\n        \n        drawnow\n        \n    end\n    \nend\n\n\n\n\n\n\n\n"
       editorLayout	      "100 M4x1[10 5 700 500]"
     }
   }
