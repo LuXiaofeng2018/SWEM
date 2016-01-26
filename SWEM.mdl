@@ -1,5 +1,5 @@
 Model {
-  Name			  "SWEM_1"
+  Name			  "SWEM"
   Version		  8.6
   MdlSubVersion		  0
   SavedCharacterEncoding  "UTF-8"
@@ -7,7 +7,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.191"
+    ComputedModelVersion    "1.194"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -29,7 +29,7 @@ Model {
       $ObjectID		      2
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [374.0, 121.0, 1408.0, 859.0]
+      Location		      [209.0, 121.0, 1408.0, 859.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		3
@@ -55,7 +55,7 @@ Model {
 	LoadSaveID		"0"
 	Extents			[1354.0, 666.0]
 	ZoomFactor		[1.75]
-	Offset			[-150.99999999999994, 135.58548043649714]
+	Offset			[-154.07848147062478, 99.195968139848162]
       }
     }
   }
@@ -65,9 +65,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "brynljones"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Mon Jan 25 16:00:36 2016"
-  RTWModifiedTimeStamp	  375638331
-  ModelVersionFormat	  "1.%<AutoIncrement:191>"
+  LastModifiedDate	  "Tue Jan 26 10:18:45 2016"
+  RTWModifiedTimeStamp	  375704118
+  ModelVersionFormat	  "1.%<AutoIncrement:194>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -250,7 +250,7 @@ Model {
 	  BlockReduction	  on
 	  BooleanDataType	  on
 	  ConditionallyExecuteInputs on
-	  DefaultParameterBehavior "Tunable"
+	  DefaultParameterBehavior "Inlined"
 	  UseDivisionForNetSlopeComputation "off"
 	  UseFloatMulNetSlope	  off
 	  DefaultUnderspecifiedDataType	"double"
@@ -384,7 +384,7 @@ Model {
 	  ProdBitPerChar	  8
 	  ProdBitPerShort	  16
 	  ProdBitPerInt		  32
-	  ProdBitPerLong	  32
+	  ProdBitPerLong	  64
 	  ProdBitPerLongLong	  64
 	  ProdBitPerFloat	  32
 	  ProdBitPerDouble	  64
@@ -396,7 +396,7 @@ Model {
 	  ProdWordSize		  64
 	  ProdShiftRightIntArith  on
 	  ProdLongLongMode	  off
-	  ProdHWDeviceType	  "Intel->x86-64 (Windows64)"
+	  ProdHWDeviceType	  "Intel->x86-64 (Linux 64)"
 	  TargetBitPerChar	  8
 	  TargetBitPerShort	  16
 	  TargetBitPerInt	  32
@@ -702,8 +702,8 @@ Model {
 	PropName		"Components"
       }
       Name		      "Configuration"
-      CurrentDlgPage	      "Solver"
-      ConfigPrmDlgPosition     [ 487, 136, 1647, 1048 ] 
+      CurrentDlgPage	      "Hardware Implementation"
+      ConfigPrmDlgPosition     [ 477, 88, 1657, 1048 ] 
     }
     PropName		    "ConfigurationSets"
   }
@@ -942,8 +942,8 @@ Model {
     }
   }
   System {
-    Name		    "SWEM_1"
-    Location		    [374, 121, 1782, 980]
+    Name		    "SWEM"
+    Location		    [209, 121, 1617, 980]
     Open		    on
     ModelBrowserVisibility  off
     ModelBrowserWidth	    200
@@ -957,7 +957,7 @@ Model {
     ShowPageBoundaries	    off
     ZoomFactor		    "175"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "124"
+    SIDHighWatermark	    "126"
     Block {
       BlockType		      SubSystem
       Name		      "Boat Sim Format"
@@ -1122,7 +1122,7 @@ Model {
 	      BlockType		      S-Function
 	      Name		      " SFunction "
 	      SID		      "102::16"
-	      Tag		      "Stateflow S-Function SWEM_1 3"
+	      Tag		      "Stateflow S-Function SWEM 3"
 	      Ports		      [4, 5]
 	      Position		      [180, 105, 230, 225]
 	      ZOrder		      7
@@ -1690,7 +1690,7 @@ Model {
 	      BlockType		      S-Function
 	      Name		      " SFunction "
 	      SID		      "24::16"
-	      Tag		      "Stateflow S-Function SWEM_1 2"
+	      Tag		      "Stateflow S-Function SWEM 2"
 	      Ports		      [14, 1]
 	      Position		      [180, 110, 230, 410]
 	      ZOrder		      7
@@ -2708,7 +2708,7 @@ Model {
 	      BlockType		      S-Function
 	      Name		      " SFunction "
 	      SID		      "26::16"
-	      Tag		      "Stateflow S-Function SWEM_1 1"
+	      Tag		      "Stateflow S-Function SWEM 1"
 	      Ports		      [13, 4]
 	      Position		      [180, 110, 230, 390]
 	      ZOrder		      7
@@ -3598,6 +3598,14 @@ Model {
       }
     }
     Block {
+      BlockType		      Terminator
+      Name		      "Terminator"
+      SID		      "125"
+      Position		      [480, 180, 500, 200]
+      ZOrder		      32
+      BackgroundColor	      "red"
+    }
+    Block {
       BlockType		      Scope
       Name		      "Scope"
       SID		      "99"
@@ -3641,6 +3649,31 @@ Model {
       DstBlock		      "Plotting"
       DstPort		      2
     }
+    Line {
+      ZOrder		      133
+      SrcBlock		      "Boat Sim Format"
+      SrcPort		      1
+      DstBlock		      "Terminator"
+      DstPort		      1
+    }
+    Annotation {
+      SID		      "126"
+      Name		      "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+      "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\np, li { white-space: pre-wrap; }"
+      "\n</style></head><body style=\" font-family:'Helvetica'; font-size:10px; font-weight:400; font-style:normal;\">\n"
+      "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-inden"
+      "t:0px;\"><span style=\" font-family:'Liberation Sans'; font-size:8px; color:#0070c0;\">Credit: National Oceanic "
+      "and Atmospheric </span></p>\n<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -"
+      "qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Liberation Sans'; font-size:8px; color:#0070c0"
+      ";\">Administration/Department of Commerce</span></p></body></html>"
+      Position		      [0, 234, 214, 280]
+      InternalMargins	      [0, 0, 0, 0]
+      FixedHeight	      on
+      FixedWidth	      on
+      HorizontalAlignment     "left"
+      VerticalAlignment	      "top"
+      Interpreter	      "rich"
+    }
   }
 }
 #Finite State Machines
@@ -3651,7 +3684,7 @@ Model {
 Stateflow {
   machine {
     id			    1
-    name		    "SWEM_1"
+    name		    "SWEM"
     created		    "15-Dec-2015 10:16:21"
     isLibrary		    0
     firstTarget		    55
@@ -4101,10 +4134,7 @@ Stateflow {
     firstTransition	    40
     firstJunction	    39
     viewObj		    23
-    visible		    1
     machine		    1
-    subviewS {
-    }
     ssIdHighWaterMark	    20
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
