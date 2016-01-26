@@ -1,3 +1,4 @@
+% Function to generate EY spectrum
 function [PSI] = ey_spectrum_depth(U,fetch,kx,ky,wind_angle,depth)
 
 
