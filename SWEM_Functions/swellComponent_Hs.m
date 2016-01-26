@@ -1,3 +1,4 @@
+% Function to generate EY  spectrum for given sig. wave height
 function [Om,PSI_swell,kx,ky,phase,U_swell] = swellComponent_Hs(depth,M,N,Lx,Ly,Hs_swell,swell_angle)
 
 %% Parameters

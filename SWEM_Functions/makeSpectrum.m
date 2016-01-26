@@ -1,3 +1,4 @@
+% Function to generate wave and current influence spectra
 function [PSI,K,THETA] = makeSpectrum(Spec,M,N,Lx,Ly,U,fetch,angle,depth,s)
 
 

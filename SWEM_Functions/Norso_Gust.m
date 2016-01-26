@@ -1,4 +1,4 @@
-% Norson gust model
+% Function to generate NPD wind gust model
 function [Ua,phi,f] = Norso_Gust(U,df,Nf)
 
 z = 10;

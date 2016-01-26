@@ -1,3 +1,6 @@
+% Function to find wave number k, given omega, g and depth
+% using dispersion relation
+
 function [k] = findk(om,g,H)
 
 om_H = om*sqrt(H/g);

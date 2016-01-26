@@ -62,24 +62,7 @@ Bl = (1/2)*alpha_p*(cp/c)*Fp;
 % %% High-frequency range
 km = 371;
 cm = sqrt((2*g)/km);  % <<<<<<<<<
-% 
-% Omega_m = sqrt(g*km*tanh(km*depth));
-% cm = Omega_m/km;
-% 
-% if (k<kp)
-%     Bh = 0;
-% else
-%     
-%     if (u_star<cm)
-%         alpha_m = 1e-2*(1+log(u_star/cm));
-%     else
-%         alpha_m = 1e-2*(1+3*log(u_star/cm));
-%     end
-%     
-%     Fm = exp(-(1/4)*(((k/km)-1)^2));
-%     
-%     Bh = (1/2)*alpha_m*(cm/c)*Fm;
-% end
+
 
 
 %% Spreading Function

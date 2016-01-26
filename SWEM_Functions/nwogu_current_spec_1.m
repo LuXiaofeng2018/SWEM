@@ -1,3 +1,4 @@
+% Function to generate Nwogu's current influence spectrum
 function [NC] = nwogu_current_spec_1(kx,ky,U,current_angle,depth)
 
 g = 9.81;

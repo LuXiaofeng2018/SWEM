@@ -1,3 +1,4 @@
+% Gamma function
 function [GAM] = gam(s)
 
 GAM=1;

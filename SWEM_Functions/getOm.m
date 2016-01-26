@@ -1,3 +1,4 @@
+% Function to find omega using dispersion relation
 function [Om] = getOm(M,N,Lx,Ly,depth)
 
 k1 = [0:(M/2)-1 M/2 -(M/2)+1:-1];

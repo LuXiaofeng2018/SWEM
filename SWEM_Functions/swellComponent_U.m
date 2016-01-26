@@ -1,10 +1,10 @@
+% Function to generate EY spectrum given swell windspeed and fetch
 function [Om,PSI_swell,kx,ky,phase] = swellComponent_U(depth,M,N,Lx,Ly,U_swell,fetch_swell,swell_angle)
 
 %% Parameters
 g       = 9.81;   % gravity
 
 % Swell
-%U_swell       = sqrt(55*Hs_swell);%10;      % offshore windspeed in m/s
 swell_angle = ((2*pi)/360)*swell_angle;
 
 

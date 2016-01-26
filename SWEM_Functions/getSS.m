@@ -1,3 +1,4 @@
+% Function to determine sea state from sig. wave height Hs
 function [SeaState ] = getSS(Hs)
 
 if (Hs>0 && Hs<=0.1)

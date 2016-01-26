@@ -1,3 +1,4 @@
+% Function to generate TMA spectrum
 function [PSI] = tma_spectrum2(kx,ky,H,U,theta_0,s)
 
 [theta,k] = cart2pol(kx,ky);
