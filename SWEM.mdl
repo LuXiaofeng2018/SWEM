@@ -1,5 +1,5 @@
 Model {
-  Name			  "SWEM_beta"
+  Name			  "SWEM"
   Version		  8.6
   MdlSubVersion		  0
   SavedCharacterEncoding  "UTF-8"
@@ -7,7 +7,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.202"
+    ComputedModelVersion    "1.204"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -53,9 +53,9 @@ Model {
 	IsActive		[1]
 	ViewObjType		"SimulinkTopLevel"
 	LoadSaveID		"0"
-	Extents			[1801.0, 863.0]
-	ZoomFactor		[1.7499999999999998]
-	Offset			[-228.08754396934592, 41.29809259650591]
+	Extents			[1821.0, 911.0]
+	ZoomFactor		[2.0]
+	Offset			[-209.15897254077447, 72.155235453648743]
       }
     }
   }
@@ -65,9 +65,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "brynljones"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Tue Jan 26 14:24:16 2016"
-  RTWModifiedTimeStamp	  375719024
-  ModelVersionFormat	  "1.%<AutoIncrement:202>"
+  LastModifiedDate	  "Tue Jan 26 16:44:16 2016"
+  RTWModifiedTimeStamp	  375727400
+  ModelVersionFormat	  "1.%<AutoIncrement:204>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -942,7 +942,7 @@ Model {
     }
   }
   System {
-    Name		    "SWEM_beta"
+    Name		    "SWEM"
     Location		    [75, 69, 1930, 1125]
     Open		    on
     ModelBrowserVisibility  off
@@ -955,7 +955,7 @@ Model {
     TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
     TiledPageScale	    1
     ShowPageBoundaries	    off
-    ZoomFactor		    "175"
+    ZoomFactor		    "200"
     ReportName		    "simulink-default.rpt"
     SIDHighWatermark	    "135"
     Block {
@@ -1122,7 +1122,7 @@ Model {
 	      BlockType		      S-Function
 	      Name		      " SFunction "
 	      SID		      "102::16"
-	      Tag		      "Stateflow S-Function SWEM_beta 3"
+	      Tag		      "Stateflow S-Function SWEM 3"
 	      Ports		      [4, 5]
 	      Position		      [180, 105, 230, 225]
 	      ZOrder		      7
@@ -1386,7 +1386,7 @@ Model {
       Variant		      off
       System {
 	Name			"Plotting"
-	Location		[65, 24, 1920, 1080]
+	Location		[75, 69, 1930, 1125]
 	Open			off
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
@@ -1690,7 +1690,7 @@ Model {
 	      BlockType		      S-Function
 	      Name		      " SFunction "
 	      SID		      "24::16"
-	      Tag		      "Stateflow S-Function SWEM_beta 2"
+	      Tag		      "Stateflow S-Function SWEM 2"
 	      Ports		      [14, 1]
 	      Position		      [180, 110, 230, 410]
 	      ZOrder		      7
@@ -2023,7 +2023,7 @@ Model {
 	    Type		    "edit"
 	    Name		    "M"
 	    Prompt		    "No. gridpoints:"
-	    Value		    "256"
+	    Value		    "128"
 	  }
 	  Object {
 	    $ObjectID		    23
@@ -2708,7 +2708,7 @@ Model {
 	      BlockType		      S-Function
 	      Name		      " SFunction "
 	      SID		      "26::16"
-	      Tag		      "Stateflow S-Function SWEM_beta 1"
+	      Tag		      "Stateflow S-Function SWEM 1"
 	      Ports		      [13, 4]
 	      Position		      [180, 110, 230, 390]
 	      ZOrder		      7
@@ -3654,25 +3654,6 @@ Model {
       DstBlock		      "Terminator"
       DstPort		      1
     }
-    Annotation {
-      SID		      "126"
-      Name		      "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-      "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\np, li { white-space: pre-wrap; }"
-      "\n</style></head><body style=\" font-family:'Helvetica'; font-size:10px; font-weight:400; font-style:normal;\">\n"
-      "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-inden"
-      "t:0px;\"><span style=\" font-family:'Liberation Sans'; font-size:8px; color:#0070c0;\">Credit: National Oceanic "
-      "and Atmospheric </span></p>\n<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -"
-      "qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Liberation Sans'; font-size:8px; color:#0070c0"
-      ";\">Administration/Department of Commerce</span></p></body></html>"
-      Position		      [0, 234, 214, 280]
-      InternalMargins	      [0, 0, 0, 0]
-      FixedHeight	      on
-      FixedWidth	      on
-      HorizontalAlignment     "left"
-      VerticalAlignment	      "top"
-      Interpreter	      "rich"
-      ZOrder		      -1
-    }
   }
 }
 #Finite State Machines
@@ -3683,7 +3664,7 @@ Model {
 Stateflow {
   machine {
     id			    1
-    name		    "SWEM_beta"
+    name		    "SWEM"
     created		    "15-Dec-2015 10:16:21"
     isLibrary		    0
     firstTarget		    55
