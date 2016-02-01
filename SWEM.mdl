@@ -7,7 +7,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.204"
+    ComputedModelVersion    "1.207"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -29,7 +29,7 @@ Model {
       $ObjectID		      2
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [75.0, 69.0, 1855.0, 1056.0]
+      Location		      [65.0, 24.0, 1855.0, 1056.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		3
@@ -54,8 +54,8 @@ Model {
 	ViewObjType		"SimulinkTopLevel"
 	LoadSaveID		"0"
 	Extents			[1821.0, 911.0]
-	ZoomFactor		[2.0]
-	Offset			[-209.15897254077447, 72.155235453648743]
+	ZoomFactor		[1.75]
+	Offset			[-248.44468682648875, 56.869521167934465]
       }
     }
   }
@@ -65,9 +65,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "brynljones"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Tue Jan 26 16:44:16 2016"
-  RTWModifiedTimeStamp	  375727400
-  ModelVersionFormat	  "1.%<AutoIncrement:204>"
+  LastModifiedDate	  "Mon Feb 01 11:28:23 2016"
+  RTWModifiedTimeStamp	  376226876
+  ModelVersionFormat	  "1.%<AutoIncrement:207>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -943,7 +943,7 @@ Model {
   }
   System {
     Name		    "SWEM"
-    Location		    [75, 69, 1930, 1125]
+    Location		    [65, 24, 1920, 1080]
     Open		    on
     ModelBrowserVisibility  off
     ModelBrowserWidth	    200
@@ -955,7 +955,7 @@ Model {
     TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
     TiledPageScale	    1
     ShowPageBoundaries	    off
-    ZoomFactor		    "200"
+    ZoomFactor		    "175"
     ReportName		    "simulink-default.rpt"
     SIDHighWatermark	    "135"
     Block {
@@ -970,7 +970,7 @@ Model {
       Variant		      off
       System {
 	Name			"Boat Sim Format"
-	Location		[374, 121, 1782, 980]
+	Location		[65, 24, 1920, 1080]
 	Open			off
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
@@ -1058,6 +1058,34 @@ Model {
 	  RequestExecContextInheritance	off
 	  SFBlockType		  "MATLAB Function"
 	  Variant		  off
+	  Port {
+	    PortNumber		    1
+	    Name		    "Omega"
+	    PropagatedSignals	    "Om_vec"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    2
+	    Name		    "Wavenum"
+	    PropagatedSignals	    "K_vec"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    3
+	    Name		    "Psi"
+	    PropagatedSignals	    "Theta_vec"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    4
+	    Name		    "Zeta_a"
+	    PropagatedSignals	    "A_vec"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
 	  System {
 	    Name		    "MATLAB Function"
 	    Location		    [223, 338, 826, 833]
@@ -1293,7 +1321,9 @@ Model {
 	  DstPort		  1
 	}
 	Line {
+	  Name			  "Wavenum"
 	  ZOrder		  109
+	  Labels		  [1, 1]
 	  SrcBlock		  "MATLAB Function"
 	  SrcPort		  2
 	  DstBlock		  "Bus\nCreator"
@@ -1343,21 +1373,27 @@ Model {
 	  DstPort		  5
 	}
 	Line {
+	  Name			  "Zeta_a"
 	  ZOrder		  111
+	  Labels		  [1, 1]
 	  SrcBlock		  "MATLAB Function"
 	  SrcPort		  4
 	  DstBlock		  "Bus\nCreator"
 	  DstPort		  4
 	}
 	Line {
+	  Name			  "Psi"
 	  ZOrder		  110
+	  Labels		  [1, 1]
 	  SrcBlock		  "MATLAB Function"
 	  SrcPort		  3
 	  DstBlock		  "Bus\nCreator"
 	  DstPort		  3
 	}
 	Line {
+	  Name			  "Omega"
 	  ZOrder		  135
+	  Labels		  [1, 1]
 	  SrcBlock		  "MATLAB Function"
 	  SrcPort		  1
 	  DstBlock		  "Bus\nCreator"
@@ -4114,10 +4150,7 @@ Stateflow {
     firstTransition	    40
     firstJunction	    39
     viewObj		    23
-    visible		    1
     machine		    1
-    subviewS {
-    }
     ssIdHighWaterMark	    20
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
@@ -4579,7 +4612,10 @@ Stateflow {
     firstTransition	    53
     firstJunction	    52
     viewObj		    42
+    visible		    1
     machine		    1
+    subviewS {
+    }
     ssIdHighWaterMark	    11
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
@@ -4614,11 +4650,12 @@ Stateflow {
       "ate k,theta coordinates to interpolate to\nkmax = max(kx);\nNk = length(kx);\ndk = kmax/Nk;\n\ndthet = (2*pi)/Nk"
       ";\n\nk = zeros(Nk,1);\ntheta = zeros(Nk,1);\n\nfor ind=1:Nk\n    k(ind) = ind*dk;\n    theta(ind) = -pi + (ind*d"
       "thet);\nend\n\n\n[Theta,K]=meshgrid(theta,k);\n[xp,yp] = pol2cart(Theta,K);\n\n% Interpolate from cartesian to p"
-      "olar\nPSI_p = interp2(kxx3,kyy3,PSI_3,xp,yp);\n\n\n% Save vectors to output\nK_vec = zeros(Nk^2,1);\nTheta_vec ="
-      " zeros(Nk^2,1);\nPSI_vec = zeros(Nk^2,1);\n\nrw = 0;\nfor the_i = 1:Nk\n    for k_i = 1:Nk\n       \n        rw "
-      "= rw+1;\n        \n        K_vec(rw) = K(the_i,k_i);\n        Theta_vec(rw) = Theta(the_i,k_i);\n        PSI_vec"
-      "(rw) = PSI_p(the_i,k_i);\n        \n    end\nend\n\n% Calculate wave amplitudes\nA_vec = sqrt(2*PSI_vec.*K_vec*d"
-      "k*dthet);\nOm_vec = sqrt(g*K_vec.*tanh(K_vec*depth));\n\n\n"
+      "olar\nPSI_p = interp2(kxx3,kyy3,PSI_3,xp,yp);\nPSI_nan = isnan(PSI_p);\n\n\n% Save vectors to output\nK_vec = ze"
+      "ros(Nk^2,1);\nTheta_vec = zeros(Nk^2,1);\nPSI_vec = zeros(Nk^2,1);\n\nrw = 0;\nfor the_i = 1:Nk\n    for k_i = 1"
+      ":Nk\n       \n        rw = rw+1;\n        \n        K_vec(rw) = K(the_i,k_i);\n        Theta_vec(rw) = Theta(the"
+      "_i,k_i);\n\n        if (PSI_nan(the_i,k_i)==0)\n            PSI_vec(rw) = PSI_p(the_i,k_i);\n        else\n     "
+      "       PSI_vec(rw) = 0;\n        end\n        \n    end\nend\n\n% Calculate wave amplitudes\nA_vec = sqrt(2*PSI_"
+      "vec.*K_vec*dk*dthet);\nOm_vec = sqrt(g*K_vec.*tanh(K_vec*depth));\n\n\n"
       editorLayout	      "100 M4x1[10 5 700 500]"
     }
   }
